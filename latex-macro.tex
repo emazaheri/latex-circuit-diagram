@@ -1,6 +1,6 @@
 % Latex circuit diagram macro
 % Kimmo Silvonen, Helsinki University of Technology, 1987-2003, version 20.8.2003
-% Extended by Vesa Linja-aho, 2006-2011, version 10.12.2011 (on course Vaihtosähköpiirit)
+% Extended by Vesa Linja-aho, 2006-2011, version 21.12.2011 (on course AC Circuits, Fall 2011)
 % The following are the macros:
 
 % v standard voltage source
@@ -1734,8 +1734,7 @@
 
 % h = horizontal, v = vertical, r = reversed
 
-% Vesan oma komento, tavallinen vahvistinlooda
-
+% General amplifier
 \newcommand{\amp}[2]
  {\put(#1){\begin{picture}(50,50)
 % \put(0,0){\line(0,1){15}}
@@ -1752,8 +1751,7 @@
  \put(25,25){\makebox(0,0){$#2$}}
 \end{picture}}}
 
-% Vesan oma opari
-
+% An operational amplifier with supply voltages
 \newcommand{\vo}[3]
  {\put(#1){\begin{picture}(50,50)(0,15)
  %\put(0,0){\line(0,1){15}}
@@ -1774,8 +1772,7 @@
  \put(29,47){\makebox(0,0){\tiny$+#3\V$}}
 \end{picture}}}
 
-% Vesan oma opari, + ja - toisin p‰in
-
+% An operational amplifier with supply voltages, inverted
 \newcommand{\voi}[3]
  {\put(#1){\begin{picture}(50,50)(0,15)
  %\put(0,0){\line(0,1){15}}
@@ -1796,8 +1793,7 @@
  \put(29,47){\makebox(0,0){\tiny$+#3\V$}}
 \end{picture}}}
 
-% Vesan opari nurin tulopinnit oikealle
-
+% An operational amplifier with supply voltages, reversed
 \newcommand{\vor}[3]
  {\put(#1){\begin{picture}(50,50)(0,15)
  %\put(0,0){\line(0,1){15}}
@@ -1820,13 +1816,21 @@
 
 \end{picture}}}
 
-% Solmun nimi
+% Node name
 \newcommand{\node}[2]
  {\put(#1){\begin{picture}(10,50)
  \thinlines \put(0,0){\circle{7}}
  \put(0,0){\makebox(1,0){\tiny #2}}
 \end{picture}}}
 
+% A rectifier bridge, REQUIRES \usepackage{rotating}
+\newcommand{\bridge}[1]{
+
+\put(#1){\rotatebox{-45}{\rd{0,0}{}}}
+\put(#1){\rotatebox{45}{\rd{-50,50}{}}}
+\put(#1){\rotatebox{135}{\ld{-50,-50}{}}}
+\put(#1){\rotatebox{-135}{\ld{-50,50}{}}}
+}
 
 % Vesan pikamakroja
 \newcommand{\kohm}{\,\mathrm{k}\Omega}
@@ -1868,10 +1872,4 @@
 %\newcommand{\Ub2}{U_\mathrm{b2}}
 
 
-\newcommand{\bridge}[1]{
 
-\put(#1){\rotatebox{-45}{\rd{0,0}{}}}
-\put(#1){\rotatebox{45}{\rd{-50,50}{}}}
-\put(#1){\rotatebox{135}{\ld{-50,-50}{}}}
-\put(#1){\rotatebox{-135}{\ld{-50,50}{}}}
-}

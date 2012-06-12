@@ -1832,6 +1832,25 @@
 \put(#1){\rotatebox{-135}{\ld{-50,50}{}}}
 }
 
+% v transformer (in power engineering diagrams)
+\newcommand{\htf}[2]
+ {\put(#1){\begin{picture}(50,32)
+ \put(20,0){\circle{20}}
+ \put(30,0){\circle{20}}
+ \put(0,0){\line(1,0){10}}
+ \put(40,0){\line(1,0){10}}
+ \put(25,-19){\makebox(0,0){$#2$}}
+\end{picture}}}
+
+\newcommand{\vtf}[2]
+ {\put(#1){\begin{picture}(32,50)
+ \put(0,20){\circle{20}}
+ \put(0,30){\circle{20}}
+ \put(0,0){\line(0,1){10}}
+ \put(0,40){\line(0,1){10}}
+ \put(-13,25){\makebox(0,0)[r]{$#2$}}
+\end{picture}}}
+
 % Vesan pikamakroja
 \newcommand{\kohm}{\,\mathrm{k}\Omega}
 \newcommand{\mohm}{\,\mathrm{M}\Omega}

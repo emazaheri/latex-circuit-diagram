@@ -1,6 +1,9 @@
-% Latex circuit diagram macro
-% Kimmo Silvonen, Helsinki University of Technology, 1987-2003, version 20.8.2003
-% Extended by Vesa Linja-aho, 2006-2011, version 21.12.2011 (on course AC Circuits, Fall 2011)
+% Latex circuit diagram macros - version 1.2 (18th August 2012)
+% Kimmo Silvonen, Vesa Linja-aho (License: LGPL)
+% Homepage: http://code.google.com/p/latex-circuit-diagram/
+
+\usepackage{upgreek} % For correct micro (\mu vs. \upmu) symbol
+
 % The following are the macros:
 
 % v standard voltage source
@@ -1871,9 +1874,9 @@
 \newcommand{\jj}{\mathrm{j}}
 \newcommand{\nF}{\,\mathrm{nF}}
 \newcommand{\ms}{\,\mathrm{ms}}
-\newcommand{\us}{\,\mathrm{\mu s}}
-\newcommand{\uF}{\,\mathrm{\mu F}}
-\newcommand{\uA}{\,\mathrm{\mu A}}
+\newcommand{\us}{\,\mathrm{\upmu s}}
+\newcommand{\uF}{\,\mathrm{\upmu F}}
+\newcommand{\uA}{\,\mathrm{\upmu A}}
 \newcommand{\Ur}[1]{U_\mathrm{#1}}
 \newcommand{\Ua}{U_{\rm a}}
 \newcommand{\Du}{\frac{{\rm d}u}{{\rm d}t}}
